@@ -1,10 +1,23 @@
 .App {
   text-align: center;
+  height: 100vh;
+  background-color: #282c34;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
 }
 
 .App-logo {
-  height: 40vmin;
   pointer-events: none;
+  width: 50%;
+}
+
+.wrapper{
+  width: 80%;
+  border: 2px #fff solid;
+  height: 80%;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -14,13 +27,10 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
 }
 
