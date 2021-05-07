@@ -10,6 +10,7 @@ export const listAPI = async () => {
 
 export const listAPIPOST = async item => {
   const body = JSON.stringify( { item } )
+  console.log( body )
   const conf = {
     method: 'POST',
     headers: {

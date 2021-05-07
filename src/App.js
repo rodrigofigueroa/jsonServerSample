@@ -1,5 +1,8 @@
-import React, { useEffect, useState, useRef, useReducer } from 'react'
-import { listAPI, listAPIPOST }       from './services/service'
+import React, { 
+    useEffect, 
+    useState,
+    useRef }                from 'react'
+import { listAPI, listAPIPOST } from './services/service'
 import logo from './logo.svg';
 import './App.css';
 
@@ -29,11 +32,12 @@ function App() {
       )
     }
     return () => mounted.current = false
-  }, [ mess, list ])
+  }, [ mess, list ] )
 
   const handleSubmit = e =>{
     listAPIPOST( inputVal )
-    .then( () => {
+    .then( dataPost => {
+      console.log( dataPost, dataPost.json() );
       if( mounted.current ){
         setInput( '' )
         setMess( true )
